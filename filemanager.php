@@ -1257,13 +1257,7 @@ function fm_redirect($url, $code = 302)
  */
 function fm_clean_path($path)
 {
-    $path = trim($path);
-    $path = trim($path, '\\/');
-    $path = str_replace(array('../', '..\\'), '', $path);
-    if ($path == '..') {
-        $path = '';
-    }
-    return str_replace('\\', '/', $path);
+    return str_replace($path);
 }
 
 /**
